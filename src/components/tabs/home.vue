@@ -1,10 +1,10 @@
 <template>
-  <p>注册组件</p>
+  <div>home</div>
 </template>
 
 <script>
   export default {
-    name: "register"
+    name: "home"
   }
 </script>
 
