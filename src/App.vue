@@ -1,11 +1,10 @@
 <template>
 <div>
-<!--  <router-link to="/login">登录</router-link>
-  <router-link to="/register">注册</router-link>
-  <mt-button>afa</mt-button>-->
   <mt-header fixed title="app模板"></mt-header>
   <div class="tabs-container">
-    <router-view></router-view>
+    <transition>
+      <router-view></router-view>
+    </transition>
   </div>
   <nav class="mui-bar mui-bar-tab">
     <router-link class="mui-tab-item" to="/home">
@@ -34,8 +33,22 @@
 </script>
 
 <style lang="scss" scoped>
-.tabs-container {
-  padding: 0;
-  margin-top: 40px;
-}
+  .tabs-container{
+    padding: 0;
+    margin: 40px 0 50px;
+    overflow-x: hidden;
+  }
+  .v-enter{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  .v-leave-to{
+    opacity: 0;
+    transform: translateX(-100%);
+    position: absolute;
+  }
+  .v-enter-active,
+  .v-leave-active{
+    transition: all 0.5s ease;
+  }
 </style>

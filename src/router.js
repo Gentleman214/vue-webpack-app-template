@@ -7,7 +7,7 @@ import search from './components/tabs/search.vue'
 
 var router = new VueRouter({
   routes:[
-    { path:'*', redirect: 'home' },
+    { path:'/', redirect: 'home' },
     { path:'/home', component: home },
     { path:'/member', component: member },
     { path:'/cart', component: cart },
